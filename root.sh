@@ -124,7 +124,7 @@ if [ $INPLACE -eq 1 ]; then
   echo ''
   echo 'Next steps:'
   echo '* Install magisk.apk'
-  echo '* Open Kitsune Mask app and proceed with additional setup'
+  echo '* Open Magisk app and proceed with additional setup'
   echo '* Quit BlueStacks'
 else
   echo '[*] Done'
@@ -135,6 +135,6 @@ else
   echo "* Copy $INITRD_OUTPUT to $INITRD_PATH"
   echo '* Open BlueStacks'
   echo '* Install magisk.apk'
-  echo '* Open Kitsune Mask app and proceed with additional setup'
+  echo '* Open Magisk app and proceed with additional setup'
   echo '* Quit BlueStacks'
 fi

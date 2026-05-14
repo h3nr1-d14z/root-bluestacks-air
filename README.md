@@ -18,8 +18,14 @@
 ## Requirements
 
 - [BlueStacks Air](https://www.bluestacks.com/mac)
-- [Kitsune Magisk](https://github.com/1q23lyc45/KitsuneMagisk/releases)  
-  Tested version: v27.2-kitsune-4
+- [Official Magisk](https://github.com/topjohnwu/Magisk/releases)  
+  Recommended: latest stable release (v28.0+)
+
+## Notes
+
+- **Kitsune Mask replaced with Official Magisk:** The original repo required Kitsune Mask (now discontinued). This fork uses Official Magisk. The APK extraction logic is identical, so the same `root.sh` script works.
+- **BlueStacks Air versions:** The versions listed above were tested by the original author up to `5.21.745.7536`. Newer releases (e.g. `5.21.755.x`) may work but are **untested**. If you try a newer version, please open an issue to report whether it succeeds or fails.
+- **SELinux flags:** `magisk.rc` contains `--auto-selinux` flags inherited from the original implementation. These are not documented in official Magisk and were likely added by Kitsune Mask. If rooting fails with official Magisk, this is the first place to investigate.
 
 ## Rooting
 
@@ -27,7 +33,7 @@
 - ‼️ **REQUIRED** ‼️ Open BlueStacks Air for the first time
 - Close BlueStacks Air
 - Download this repo and extract it
-- Copy the downloaded Kitsune Mask apk to the project folder, and rename it to `magisk.apk`
+- Copy the downloaded Magisk APK to the project folder, and rename it to `magisk.apk`
 - Open **Terminal.app** or **iTerm.app** and navigate to the project folder
 
   ```bash
@@ -60,12 +66,12 @@
 
 ### Next Steps
 
-- Install Kitsune Mask (`magisk.apk`)
-- Open Kitsune Mask and press **OK** when the **Requires Additional Setup** prompt appears. This will reboot BlueStacks Air.
+- Install Magisk (`magisk.apk`)
+- Open Magisk and press **OK** when the **Requires Additional Setup** prompt appears. This will reboot BlueStacks Air.
   ![magisk-additional-setup](/images/magisk-additional-setup.png)
 - Force quit BlueStacks Air if necessary
 - Open BlueStacks Air and enjoy
-- If you need **Zygisk**, enable it from Kitsune Mask settings and reboot BlueStacks Air
+- If you need **Zygisk**, enable it from Magisk settings and reboot BlueStacks Air
 
 ## Unrooting
 
