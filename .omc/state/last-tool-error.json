@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"adb -s emulator-5554 shell su -c id 2>&1; adb -s emulator-5554 shell which su 2>&1; adb -s emulator-5554 shell ls /sbin/magisk 2>&1; adb -s emulator-5554 shell ls /data/adb/magisk 2>&1\",\"t...",
+  "error": "Exit code 1\n/system/bin/sh: su: inaccessible or not found\nls: /sbin/magisk: No such file or directory\nls: /data/adb/magisk: Permission denied",
+  "timestamp": "2026-05-14T03:09:09.358Z",
+  "retry_count": 1
+}
