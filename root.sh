@@ -72,6 +72,10 @@ mkdir $MAGISK_BIN_DIR
 BIN_NAMES=("magisk64" "magiskinit" "magiskpolicy")
 for BIN_NAME in ${BIN_NAMES[@]}; do
   SRC=magisk/lib/$ARCH/lib$BIN_NAME.so
+  # Official Magisk uses libmagisk.so instead of libmagisk64.so
+  if [ "$BIN_NAME" = "magisk64" ] && [ ! -f "$SRC" ]; then
+    SRC=magisk/lib/$ARCH/libmagisk.so
+  fi
   [[ -f $SRC ]] && cp $SRC $MAGISK_BIN_DIR/$BIN_NAME
 done
 cp magisk/assets/stub.apk $MAGISK_BIN_DIR/stub.apk
